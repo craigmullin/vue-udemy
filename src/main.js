@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import App from './App.vue'
-
-Vue.config.productionTip = false
+import Vue from 'vue';
+//import created file with relative path
+import App from './App';
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  // render function to display instance of 'App'
+  render: h => h(App)
+}).$mount('#app');
