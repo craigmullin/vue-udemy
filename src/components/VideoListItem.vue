@@ -1,7 +1,7 @@
 <template>
-  <li>
-    {{ video.snippet.title }}
-  </li>
+  <li class="list-group-item media">
+    <img class="mr-3" :src="thumbnail" /> <div class="media-body"> {{ video.snippet.title }} </div></li
+  >
 </template>
 
 <script>
@@ -10,7 +10,16 @@ export default {
   props: {
     video: {},
   },
+  computed: {
+    thumbnail() {
+      return this.video.snippet.thumbnails.default.url
+    },
+  },
 }
 </script>
 
-<style></style>
+<style scoped>
+li {
+  display: flex;
+}
+</style>
